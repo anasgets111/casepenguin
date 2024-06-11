@@ -8,21 +8,28 @@ import Providers from "@/components/Providers";
 
 const recursive = Recursive({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+eexport const metadata: Metadata = {
   title: "CasePenguin",
   description: "Design and order your custom iPhone case today!",
   openGraph: {
     type: "website",
-    url: "https://casepenguin.vercel.app", // Replace with your website URL
+    url: "https://casepenguin.vercel.app",
     title: "CasePenguin | Create Your Custom iPhone Case Now",
     description: "Design and order your custom iPhone case today!",
     images: [
       {
-        url: "hhttps://casepenguin.vercel.app/openguin-1", // Replace with your image URL
-        width: 800,
+        url: "https://casepenguin.vercel.app/penguin-1.jpeg",
         height: 600,
         alt: "CasePenguin logo",
       },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CasePenguin | Create Your Custom iPhone Case Now",
+    description: "Design and order your custom iPhone case today!",
+    images: [
+      "https://casepenguin.vercel.app/penguin-1.jpeg"
     ],
   },
 };
