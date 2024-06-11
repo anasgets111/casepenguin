@@ -1,12 +1,13 @@
 {
-  "name": "casecobra",
+  "name": "casepenguin",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@headlessui/react": "latest",
@@ -29,7 +30,7 @@
     "latest": "latest",
     "lucide-react": "latest",
     "next": "latest",
-    "prettier-plugin-tailwindcss": "^0.6.1",
+    "prettier-plugin-tailwindcss": "latest",
     "prisma": "latest",
     "react": "latest",
     "react-dom": "latest",
