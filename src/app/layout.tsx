@@ -8,7 +8,7 @@ import Providers from "@/components/Providers";
 
 const recursive = Recursive({ subsets: ["latin"] });
 
-eexport const metadata: Metadata = {
+export const metadata: Metadata = {
   title: "CasePenguin",
   description: "Design and order your custom iPhone case today!",
   openGraph: {
@@ -28,9 +28,7 @@ eexport const metadata: Metadata = {
     card: "summary_large_image",
     title: "CasePenguin | Create Your Custom iPhone Case Now",
     description: "Design and order your custom iPhone case today!",
-    images: [
-      "https://casepenguin.vercel.app/penguin-1.jpeg"
-    ],
+    images: ["https://casepenguin.vercel.app/penguin-1.jpeg"],
   },
 };
 
