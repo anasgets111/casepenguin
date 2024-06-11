@@ -10,7 +10,21 @@ const recursive = Recursive({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "CasePenguin",
-  description: "Create your custom iphone case now",
+  description: "Design and order your custom iPhone case today!",
+  openGraph: {
+    type: "website",
+    url: "https://casepenguin.vercel.app", // Replace with your website URL
+    title: "CasePenguin | Create Your Custom iPhone Case Now",
+    description: "Design and order your custom iPhone case today!",
+    images: [
+      {
+        url: "hhttps://casepenguin.vercel.app/openguin-1", // Replace with your image URL
+        width: 800,
+        height: 600,
+        alt: "CasePenguin logo",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

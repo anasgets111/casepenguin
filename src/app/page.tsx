@@ -12,12 +12,19 @@ export default function Home() {
       <section>
         <MaxWidthWrapper className="pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-3 lg:gap-x-0 lg:pb-52 lg:pt-24 xl:gap-x-8 xl:pt-32">
           <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
-            <div className="relative mx-auto flex flex-col items-center text-center lg:items-start lg:text-left">
-              <div className="absolute -top-20 left-0 hidden w-28 lg:block">
-                <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-slate-50 via-slate-50/50" />
-                <img src="/penguin-1.jpeg" className="w-full rounded-full" />
-              </div>
-              <h1 className="relative mt-16 w-fit text-balance text-5xl font-bold !leading-tight tracking-tight text-gray-900 md:text-6xl lg:text-7xl">
+            <div className="relative mx-auto flex flex-col items-center text-center lg:flex-row lg:items-center lg:text-left">
+              <div className="relative mb-8 lg:left-0 lg:mb-0 lg:w-auto">
+                <div className="absolute inset-x-0 bottom-0 h-28 from-slate-50 via-slate-50/50 lg:hidden" />
+                <img
+                  src="/penguin-1.jpeg"
+                  className="rounded-full outline-dotted ring-2 ring-green-800 sm:h-32 sm:w-32 md:h-48 md:w-48 lg:h-48 lg:w-48 lg:max-w-lg"
+                />
+              </div>{" "}
+            </div>
+
+            <div className="lg:ml-12">
+              {" "}
+              <h1 className="mt-16 w-fit text-balance text-5xl font-bold !leading-tight tracking-tight text-gray-900 md:text-6xl lg:text-7xl">
                 Your Image on a{" "}
                 <span className="bg-green-600 px-2 text-white">Custom</span>{" "}
                 Phone Case
@@ -28,7 +35,6 @@ export default function Home() {
                 CasePenguin allows you to protect your memories, not just your
                 phone case.
               </p>
-
               <ul className="mt-8 flex flex-col items-center space-y-2 text-left font-medium sm:items-start">
                 <div className="space-y-2">
                   <li className="flex items-center gap-1.5 text-left">
@@ -45,7 +51,6 @@ export default function Home() {
                   </li>
                 </div>
               </ul>
-
               <div className="mt-12 flex flex-col items-center gap-5 sm:flex-row sm:items-start">
                 <div className="flex -space-x-4">
                   <img
