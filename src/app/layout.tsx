@@ -9,28 +9,51 @@ import Providers from "@/components/Providers";
 const recursive = Recursive({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CasePenguin",
-  description: "Design and order your custom iPhone case today!",
+  title: "CasePenguin | Custom Phone Cases",
+  description:
+    "Design and order your custom iPhone case today! Turn your memories into stylish phone protection with CasePenguin.",
+  keywords: [
+    "custom phone case",
+    "iphone case",
+    "personalized case",
+    "phone accessories",
+    "case design",
+    "gift ideas", 
+    "phone protection" 
+  ],
+  publisher: "CasePenguin",
+  twitter: {
+    card: "summary_large_image",
+    title: "CasePenguin: Design Your Dream Phone Case", 
+    description:
+      "Create a unique phone case with your photos. High-quality, durable, and stylish – order yours now!",
+    creator: "@anasgets111", 
+    images: ["https://casepenguin.vercel.app/penguin-1.jpeg"],
+  },
   openGraph: {
-    type: "website",
-    url: "https://casepenguin.vercel.app",
-    title: "CasePenguin | Create Your Custom iPhone Case Now",
-    description: "Design and order your custom iPhone case today!",
+    title: "CasePenguin: Make Your Phone Uniquely Yours", 
+    description:
+      "Design and order your custom iPhone case today! Turn your memories into stylish phone protection with CasePenguin.",
+    url: "https://casepenguin.vercel.app", 
+    siteName: "CasePenguin", 
     images: [
       {
         url: "https://casepenguin.vercel.app/penguin-1.jpeg",
-        height: 600,
-        alt: "CasePenguin logo",
+        width: 1200,
+        height: 630,
+        alt: "A custom phone case from CasePenguin", 
       },
     ],
+    locale: "en_US",
+    type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "CasePenguin | Create Your Custom iPhone Case Now",
-    description: "Design and order your custom iPhone case today!",
-    images: ["https://casepenguin.vercel.app/penguin-1.jpeg"],
+  icons: {
+    icon: "https://casepenguin.vercel.app/favicon.ico", 
+    shortcut: "https://casepenguin.vercel.app/favicon.ico", 
   },
 };
+
+
 
 export default function RootLayout({
   children,
