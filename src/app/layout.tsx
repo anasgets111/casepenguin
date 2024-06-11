@@ -18,42 +18,40 @@ export const metadata: Metadata = {
     "personalized case",
     "phone accessories",
     "case design",
-    "gift ideas", 
-    "phone protection" 
+    "gift ideas",
+    "phone protection",
   ],
   publisher: "CasePenguin",
   twitter: {
     card: "summary_large_image",
-    title: "CasePenguin: Design Your Dream Phone Case", 
+    title: "CasePenguin: Design Your Dream Phone Case",
     description:
       "Create a unique phone case with your photos. High-quality, durable, and stylish – order yours now!",
-    creator: "@anasgets111", 
-    images: ["https://casepenguin.vercel.app/penguin-1.jpeg"],
+    creator: "@anasgets111",
+    images: ["https://casepenguin.vercel.app/thumbnail.png"],
   },
   openGraph: {
-    title: "CasePenguin: Make Your Phone Uniquely Yours", 
+    title: "CasePenguin: Make Your Phone Uniquely Yours",
     description:
       "Design and order your custom iPhone case today! Turn your memories into stylish phone protection with CasePenguin.",
-    url: "https://casepenguin.vercel.app", 
-    siteName: "CasePenguin", 
+    url: "https://casepenguin.vercel.app",
+    siteName: "CasePenguin",
     images: [
       {
-        url: "https://casepenguin.vercel.app/penguin-1.jpeg",
+        url: "https://casepenguin.vercel.app/thumbnail.png",
         width: 1200,
         height: 630,
-        alt: "A custom phone case from CasePenguin", 
+        alt: "A custom phone case from CasePenguin",
       },
     ],
     locale: "en_US",
     type: "website",
   },
   icons: {
-    icon: "https://casepenguin.vercel.app/favicon.ico", 
-    shortcut: "https://casepenguin.vercel.app/favicon.ico", 
+    icon: "https://casepenguin.vercel.app/favicon.ico",
+    shortcut: "https://casepenguin.vercel.app/favicon.ico",
   },
 };
-
-
 
 export default function RootLayout({
   children,
