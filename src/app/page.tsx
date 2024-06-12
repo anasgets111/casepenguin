@@ -55,17 +55,17 @@ export default function Home() {
                 <div className="flex -space-x-4">
                   <img
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
-                    src="/users/user-1.png"
+                    src="/users/user-1.jpg"
                     alt="user image"
                   />
                   <img
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
-                    src="/users/user-2.png"
+                    src="/users/user-2.jpg"
                     alt="user image"
                   />
                   <img
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
-                    src="/users/user-3.png"
+                    src="/users/user-3.jpg"
                     alt="user image"
                   />
                   <img
@@ -154,11 +154,11 @@ export default function Home() {
               <div className="mt-2 flex gap-4">
                 <img
                   className="h-12 w-12 rounded-full object-cover"
-                  src="/users/user-1.png"
+                  src="/users/user-1.jpg"
                   alt="user"
                 />
                 <div className="flex flex-col">
-                  <p className="font-semibold">Jonathan</p>
+                  <p className="font-semibold">Karl</p>
                   <div className="flex items-center gap-1.5 text-zinc-600">
                     <Check className="h-4 w-4 stroke-[3px] text-green-600" />
                     <p className="text-sm">Verified Purchase</p>
@@ -191,11 +191,11 @@ export default function Home() {
               <div className="mt-2 flex gap-4">
                 <img
                   className="h-12 w-12 rounded-full object-cover"
-                  src="/users/user-4.jpg"
+                  src="/users/user-2.jpg"
                   alt="user"
                 />
                 <div className="flex flex-col">
-                  <p className="font-semibold">Josh</p>
+                  <p className="font-semibold">Daisy</p>
                   <div className="flex items-center gap-1.5 text-zinc-600">
                     <Check className="h-4 w-4 stroke-[3px] text-green-600" />
                     <p className="text-sm">Verified Purchase</p>
