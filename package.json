@@ -38,6 +38,7 @@
     "react-dom-confetti": "latest",
     "react-dropzone": "latest",
     "react-rnd": "latest",
+    "resend": "^3.3.0",
     "sharp": "latest",
     "stripe": "latest",
     "tailwind-merge": "latest",
