@@ -11,7 +11,7 @@ const Navbar = async () => {
   const isAdmin = user?.email === process.env.ADMIN_EMAIL;
 
   return (
-    <nav className="sticky inset-x-0 top-0 z-[100] h-14 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
+    <nav className="sticky inset-x-0 top-0 z-100 h-14 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between border-b border-zinc-200">
           <Link href="/" className="z-40 flex font-semibold">
@@ -21,7 +21,7 @@ const Navbar = async () => {
             {user ? (
               <>
                 <Link
-                  href=" /api/auth/logout"
+                  href="/api/auth/logout"
                   className={buttonVariants({
                     size: "sm",
                     variant: "ghost",
@@ -29,9 +29,9 @@ const Navbar = async () => {
                 >
                   Sign out
                 </Link>
-                {isAdmin ? (
+                {isAdmin && (
                   <Link
-                    href=" /dashboard"
+                    href="/dashboard"
                     className={buttonVariants({
                       size: "sm",
                       variant: "ghost",
@@ -39,9 +39,9 @@ const Navbar = async () => {
                   >
                     Dashboard✨
                   </Link>
-                ) : null}
+                )}
                 <Link
-                  href=" /configure/upload"
+                  href="/configure/upload"
                   className={buttonVariants({
                     size: "sm",
                     className: "hidden items-center gap-1 sm:flex",
@@ -54,7 +54,7 @@ const Navbar = async () => {
             ) : (
               <>
                 <Link
-                  href=" /api/auth/register"
+                  href="/api/auth/register"
                   className={buttonVariants({
                     size: "sm",
                     variant: "ghost",
@@ -71,9 +71,9 @@ const Navbar = async () => {
                 >
                   Login
                 </Link>
-                <div className="hidden h-8 w-px bg-zinc-200 sm:block"> </div>
+                <div className="hidden h-8 w-px bg-zinc-200 sm:block" />
                 <Link
-                  href=" /configure/upload"
+                  href="/configure/upload"
                   className={buttonVariants({
                     size: "sm",
                     className: "hidden items-center gap-1 sm:flex",

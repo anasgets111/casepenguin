@@ -18,7 +18,7 @@ const getRandomPosition = (gridSize: { rows: number; cols: number }) => ({
 const generateObstacles = (
   gridSize: { rows: number; cols: number },
   count: number,
-  snake: { x: number; y: number }[]
+  snake: { x: number; y: number }[],
 ) => {
   const obstacles = [];
   for (let i = 0; i < count; i++) {
@@ -27,7 +27,7 @@ const generateObstacles = (
       position = getRandomPosition(gridSize);
     } while (
       snake.some(
-        (segment) => segment.x === position.x && segment.y === position.y
+        (segment) => segment.x === position.x && segment.y === position.y,
       )
     );
     obstacles.push(position);
@@ -40,7 +40,7 @@ const SnakeGame = () => {
   const [snake, setSnake] = useState([{ x: 10, y: 10 }]);
   const [food, setFood] = useState(getRandomPosition({ rows: 25, cols: 25 }));
   const [obstacles, setObstacles] = useState(
-    generateObstacles({ rows: 25, cols: 25 }, 5, snake)
+    generateObstacles({ rows: 25, cols: 25 }, 5, snake),
   );
   const [powerUp, setPowerUp] = useState<{
     x: number;
@@ -122,10 +122,10 @@ const SnakeGame = () => {
         };
         if (
           newSnake.some(
-            (segment) => segment.x === head.x && segment.y === head.y
+            (segment) => segment.x === head.x && segment.y === head.y,
           ) ||
           obstacles.some(
-            (obstacle) => obstacle.x === head.x && obstacle.y === head.y
+            (obstacle) => obstacle.x === head.x && obstacle.y === head.y,
           )
         ) {
           if (lives > 1) {
@@ -138,7 +138,7 @@ const SnakeGame = () => {
             setHighScore((prev) => Math.max(prev, score));
             localStorage.setItem(
               "highScore",
-              JSON.stringify(Math.max(highScore, score))
+              JSON.stringify(Math.max(highScore, score)),
             );
             clearInterval(interval);
             return prevSnake;
@@ -232,7 +232,7 @@ const SnakeGame = () => {
             powerUp.type === "speedBoost" ? "bg-blue-500" : "bg-yellow-400";
         }
         cells.push(
-          <div key={`${x}-${y}`} className={`${className} w-full h-full`} />
+          <div key={`${x}-${y}`} className={`${className} h-full w-full`} />,
         );
       }
     }
@@ -242,35 +242,31 @@ const SnakeGame = () => {
   return (
     <div
       ref={gameContainerRef} // Reference to the game container
-      className="flex flex-col items-center justify-center h-screen bg-gray-800"
+      className="flex h-screen flex-col items-center justify-center bg-gray-800"
       style={{ height: "90vh" }}
     >
-      <div className="flex justify-between w-full px-4 mb-4 text-white text-2xl flex-shrink-0">
-
-        <div className="flex justify-between w-full px-4 mb-4 text-white text-2xl flex-shrink-0">
-          <div>Score: {score}</div>
-          <div>
-            High Score: {highScore}
-            <button
-              onClick={clearHighScore}
-              className="px-2 py-1 bg-red-600 text-white rounded hover:bg-red-700 text-sm ml-2"
-            >
-              Clear
-            </button>
-          </div>
-          <div>Lives: {lives}</div>
+      <div className="mb-4 flex w-full shrink-0 justify-between px-4 text-2xl text-white">
+        <div>Score: {score}</div>
+        <div>
+          High Score: {highScore}
+          <button
+            onClick={clearHighScore}
+            className="ml-2 rounded bg-red-600 px-2 py-1 text-sm text-white hover:bg-red-700"
+          >
+            Clear
+          </button>
         </div>
+        <div>Lives: {lives}</div>
       </div>
 
       {activePowerUp && (
-        <div className="text-white text-xl mb-4 flex-shrink-0">
-          {/* Prevent this section from shrinking */}
+        <div className="mb-4 shrink-0 text-xl text-white">
           Active Power-Up: {activePowerUp}
         </div>
       )}
 
       <div
-        className="grid flex-grow" // Grid will grow to use available space
+        className="grid grow"
         style={{
           gridTemplateColumns: `repeat(${gridSize.cols}, ${CELL_SIZE}px)`,
           gridTemplateRows: `repeat(${gridSize.rows}, ${CELL_SIZE}px)`,
@@ -281,9 +277,14 @@ const SnakeGame = () => {
       </div>
 
       {gameOver && (
-        <div className="mt-4 flex-shrink-0">
-          {/* Prevent this section from shrinking */}
-          {/* ... (Game Over message and button) */}
+        <div className="mt-4 shrink-0">
+          <div className="mb-4 text-2xl text-white">Game Over!</div>
+          <button
+            onClick={resetGame}
+            className="rounded bg-green-600 px-4 py-2 text-white hover:bg-green-700"
+          >
+            Play Again
+          </button>
         </div>
       )}
     </div>

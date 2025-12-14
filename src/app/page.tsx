@@ -10,26 +10,26 @@ export default function Home() {
   return (
     <div className="bg-sky-100">
       <section>
-        <MaxWidthWrapper className="pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-3 lg:gap-x-0 lg:pb-52 lg:pt-24 xl:gap-x-8 xl:pt-32">
+        <MaxWidthWrapper className="pt-10 pb-24 sm:pb-32 lg:grid lg:grid-cols-3 lg:gap-x-0 lg:pt-24 lg:pb-52 xl:gap-x-8 xl:pt-32">
           <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
             <div className="relative mx-auto flex flex-col items-center text-center lg:flex-row lg:items-center lg:text-left">
               <div className="relative mb-8 lg:left-0 lg:mb-0 lg:w-auto">
-                <div className="absolute inset-x-0 bottom-0 h-28 from-slate-50 via-slate-50/50 lg:hidden" />
+                <div className="absolute inset-x-0 bottom-0 h-28 bg-linear-to-t from-slate-50 via-slate-50/50 lg:hidden" />
                 <img
                   src="/penguin-1.jpeg"
-                  className="rounded-full outline-dotted ring-2 ring-green-800 sm:h-32 sm:w-32 md:h-48 md:w-48 lg:h-48 lg:w-48 lg:max-w-lg"
+                  alt="CasePenguin mascot"
+                  className="rounded-full ring-2 ring-green-800 outline-dotted sm:h-32 sm:w-32 md:h-48 md:w-48 lg:h-48 lg:w-48"
                 />
-              </div>{" "}
+              </div>
             </div>
 
             <div className="lg:ml-12">
-              {" "}
-              <h1 className="mt-16 w-fit text-balance text-5xl font-bold !leading-tight tracking-tight text-gray-900 md:text-6xl lg:text-7xl">
+              <h1 className="mt-16 w-fit text-5xl leading-tight font-bold tracking-tight text-balance text-gray-900 md:text-6xl lg:text-7xl">
                 Your Image on a{" "}
                 <span className="bg-green-600 px-2 text-white">Custom</span>{" "}
                 Phone Case
               </h1>
-              <p className="mt-8 max-w-prose text-balance text-center text-lg md:text-wrap lg:pr-10 lg:text-left">
+              <p className="mt-8 max-w-prose text-center text-lg text-balance lg:pr-10 lg:text-left">
                 Capture your favorite memories with your own,{" "}
                 <span className="font-semibold">one-of-one</span> phone case.
                 CasePenguin allows you to protect your memories, not just your
@@ -101,10 +101,14 @@ export default function Home() {
             <div className="relative md:max-w-xl">
               <img
                 src="/your-image.png"
+                alt=""
+                aria-hidden="true"
                 className="absolute -top-20 left-56 hidden w-40 select-none sm:block lg:hidden lg:w-52 xl:block"
               />
               <img
                 src="/line.png"
+                alt=""
+                aria-hidden="true"
                 className="absolute -bottom-6 -left-6 w-20 select-none"
               />
               <Phone className="w-64" imgSrc="/testimonials/3.jpg" />
@@ -117,7 +121,7 @@ export default function Home() {
       <section className="grainy-dark bg-slate-100 py-24">
         <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
           <div className="flex flex-col items-center gap-4 sm:gap-6 lg:flex-row">
-            <h2 className="order-1 mt-2 text-balance text-center text-5xl font-bold !leading-tight tracking-tight text-gray-900 md:text-6xl">
+            <h2 className="order-1 mt-2 text-center text-5xl leading-tight font-bold tracking-tight text-balance text-gray-900 md:text-6xl">
               What our{" "}
               <span className="relative px-2">
                 customers{" "}
@@ -127,6 +131,7 @@ export default function Home() {
             </h2>
             <img
               src="/penguin-2.jpeg"
+              alt="CasePenguin mascot"
               className="order-0 w-24 rounded-full ring-black delay-200 ease-linear hover:ring-2 lg:order-2"
             />
           </div>
@@ -215,7 +220,7 @@ export default function Home() {
         <MaxWidthWrapper className="py-24">
           <div className="mb-12 px-6 lg:px-8">
             <div className="mx-auto max-w-2xl sm:text-center">
-              <h2 className="order-1 mt-2 text-balance text-center text-5xl font-bold !leading-tight tracking-tight text-gray-900 md:text-6xl">
+              <h2 className="order-1 mt-2 text-center text-5xl leading-tight font-bold tracking-tight text-balance text-gray-900 md:text-6xl">
                 Upload your photo and get{" "}
                 <span className="relative bg-green-600 px-2 text-white">
                   your own case
@@ -226,13 +231,15 @@ export default function Home() {
           </div>
 
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <div className="relative flex grid-cols-2 flex-col items-center gap-40 md:grid">
+            <div className="relative flex flex-col items-center gap-40 md:grid md:grid-cols-2">
               <img
                 src="/arrow.png"
-                className="absolute left-1/2 top-[25rem] z-10 -translate-x-1/2 -translate-y-1/2 rotate-90 md:top-1/2 md:rotate-0"
+                alt=""
+                aria-hidden="true"
+                className="absolute top-[100px] left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rotate-90 md:top-1/2 md:rotate-0"
               />
 
-              <div className="relative h-80 w-full max-w-sm rounded-xl bg-gray-900/5 ring-inset ring-gray-900/10 md:h-full md:justify-self-end lg:rounded-2xl">
+              <div className="relative h-80 w-full max-w-sm rounded-xl bg-gray-900/5 ring-gray-900/10 ring-inset md:h-full md:justify-self-end lg:rounded-2xl">
                 <img
                   src="/stock.jpg"
                   className="h-full w-full rounded-md bg-white object-cover shadow-2xl ring-1 ring-gray-900/10"

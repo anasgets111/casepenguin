@@ -153,16 +153,16 @@ const DesignConfigorator = ({
   }
 
   return (
-    <div className="relative mb-20 mt-20 grid grid-cols-1 pb-20 lg:grid-cols-3">
+    <div className="relative mt-20 mb-20 grid grid-cols-1 pb-20 lg:grid-cols-3">
       <div
         ref={containerRef}
-        className="relative col-span-2 flex h-[37.5rem] w-full max-w-4xl items-center justify-center overflow-hidden rounded-lg border-2 border-dashed border-gray-300 p-12 text-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        className="focus:ring-primary relative col-span-2 flex h-[600px] w-full max-w-4xl items-center justify-center overflow-hidden rounded-lg border-2 border-dashed border-gray-300 p-12 text-center focus:ring-2 focus:ring-offset-2 focus:outline-none"
       >
-        <div className="pointer-events-none relative aspect-[896/1831] w-60 bg-opacity-50">
+        <div className="pointer-events-none relative aspect-896/1831 w-60 opacity-50">
           <AspectRatio
             ref={phoneCaseRef}
             ratio={896 / 1831}
-            className="pointer-events-none relative z-50 aspect-[896/1831] w-full"
+            className="pointer-events-none relative z-50 aspect-896/1831 w-full"
           >
             <NextImage
               fill
@@ -171,10 +171,10 @@ const DesignConfigorator = ({
               className="pointer-events-none z-50 select-none"
             />
           </AspectRatio>
-          <div className="absolute inset-0 bottom-px left-[3px] right-[3px] top-px z-40 rounded-[32px] shadow-[0_0_0_99999px_rgba(229,231,235,0.6)]" />
+          <div className="absolute inset-0 top-px right-[3px] bottom-px left-[3px] z-40 rounded-[32px] shadow-[0_0_0_99999px_rgba(229,231,235,0.6)]" />
           <div
             className={cn(
-              "absolute inset-0 bottom-px left-[3px] right-[3px] top-px rounded-[32px]",
+              "absolute inset-0 top-px right-[3px] bottom-px left-[3px] rounded-[32px]",
               `bg-${options.color.tw}`,
             )}
           />
@@ -199,7 +199,7 @@ const DesignConfigorator = ({
             const { x, y } = data;
             setRenderedPosition({ x, y });
           }}
-          className="absolute z-20 border-[3px] border-primary"
+          className="border-primary absolute z-20 border-[3px]"
           lockAspectRatio
           resizeHandleComponent={{
             bottomRight: <HandleComponent />,
@@ -219,14 +219,14 @@ const DesignConfigorator = ({
         </Rnd>
       </div>
 
-      <div className="col-span-full flex h-[37.5rem] w-full flex-col bg-white lg:col-span-1">
+      <div className="col-span-full flex h-[600px] w-full flex-col bg-white lg:col-span-1">
         <ScrollArea className="relative flex-1 overflow-auto">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-12 bg-gradient-to-t from-white"
+            className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-12 bg-linear-to-t from-white"
           />
 
-          <div className="px-8 pb-12 pt-8">
+          <div className="px-8 pt-8 pb-12">
             <h2 className="text-3xl font-bold tracking-tight">
               Customize your case
             </h2>
@@ -252,7 +252,7 @@ const DesignConfigorator = ({
                         value={color}
                         className={({ active, checked }) =>
                           cn(
-                            "relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full border-2 border-transparent p-0.5 focus:outline-none focus:ring-0 active:outline-none active:ring-0",
+                            "relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full border-2 border-transparent p-0.5 focus:ring-0 focus:outline-none active:ring-0 active:outline-none",
                             {
                               [`border-${color.tw}`]: active || checked,
                             },
@@ -262,7 +262,7 @@ const DesignConfigorator = ({
                         <span
                           className={cn(
                             `bg-${color.tw}`,
-                            "h-8 w-8 rounded-full border border-black border-opacity-10",
+                            "border-opacity-10 h-8 w-8 rounded-full border border-black",
                           )}
                         />
                       </RadioGroup.Option>
@@ -335,7 +335,7 @@ const DesignConfigorator = ({
                             value={option}
                             className={({ active, checked }) =>
                               cn(
-                                "relative block cursor-pointer rounded-lg border-2 border-zinc-200 bg-white px-6 py-4 shadow-sm outline-none ring-0 focus:outline-none focus:ring-0 sm:flex sm:justify-between",
+                                "relative block cursor-pointer rounded-lg border-2 border-zinc-200 bg-white px-6 py-4 shadow-sm ring-0 outline-none focus:ring-0 focus:outline-none sm:flex sm:justify-between",
                                 {
                                   "border-primary": active || checked,
                                 },
@@ -366,7 +366,7 @@ const DesignConfigorator = ({
 
                             <RadioGroup.Description
                               as="span"
-                              className="mt-2 flex text-sm sm:ml-4 sm:mt-0 sm:flex-col sm:text-right"
+                              className="mt-2 flex text-sm sm:mt-0 sm:ml-4 sm:flex-col sm:text-right"
                             >
                               <span className="font-medium text-gray-900">
                                 {formatPrice(option.price / 100)}
@@ -387,7 +387,7 @@ const DesignConfigorator = ({
           <div className="h-px w-full bg-zinc-200" />
           <div className="flex h-full w-full items-center justify-end">
             <div className="flex w-full items-center gap-6">
-              <p className="whitespace-nowrap font-medium">
+              <p className="font-medium whitespace-nowrap">
                 {formatPrice(
                   (BASE_PRICE + options.finish.price + options.material.price) /
                     100,

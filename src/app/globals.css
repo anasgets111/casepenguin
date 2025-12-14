@@ -1,10 +1,82 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@theme {
+  --color-green-50: hsl(220, 95%, 96%);
+  --color-green-100: hsl(220, 90%, 92%);
+  --color-green-200: hsl(220, 80%, 85%);
+  --color-green-300: hsl(220, 70%, 75%);
+  --color-green-400: hsl(220, 65%, 65%);
+  --color-green-500: hsl(220, 60%, 55%);
+  --color-green-600: hsl(220, 55%, 45%);
+  --color-green-700: hsl(220, 50%, 35%);
+  --color-green-800: hsl(220, 45%, 25%);
+  --color-green-900: hsl(220, 40%, 15%);
+  --color-green-950: hsl(220, 35%, 10%);
+  
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  
+  --animate-fade-in: fade-in 0.5s linear forwards;
+  --animate-flashing: flashing 1.4s infinite linear;
+  
+  --breakpoint-2xl: 1400px;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes marquee {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes flashing {
+  0%, 100% { opacity: 0.2; }
+  20% { opacity: 1; }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: var(--animate-fade-in);
+  }
+
+  .animate-marquee {
+    animation: marquee var(--marquee-duration, 60s) linear infinite;
+    will-change: transform;
+  }
+
+  .animate-flashing {
+    animation: var(--animate-flashing);
+  }
+}
 
 @layer base {
   :root {
-    --background: skyblue;
+    --background: 197 100% 87%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -51,10 +123,11 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 }
 .grainy-light {

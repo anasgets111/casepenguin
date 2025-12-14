@@ -19,7 +19,7 @@ const LoginModal = ({
 }) => {
   return (
     <Dialog onOpenChange={setIsOpen} open={isOpen}>
-      <DialogContent className="absolute z-[9999999]">
+      <DialogContent className="absolute z-9999">
         <DialogHeader>
           <div className="relative mx-auto mb-2 h-24 w-24">
             <Image
