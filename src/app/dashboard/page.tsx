@@ -71,7 +71,7 @@ const Page = async () => {
   const WEEKLY_GOAL = 500;
   const MONTHLY_GOAL = 2500;
   return (
-    <div className="flex min-h-screen w-full bg-muted/40">
+    <div className="bg-muted/40 flex min-h-screen w-full">
       <div className="mx-auto flex w-full max-w-7xl flex-col sm:gap-4 sm:py-4">
         <div className="flex flex-col gap-16">
           <div className="grid gap-4 sm:grid-cols-2">
@@ -83,7 +83,7 @@ const Page = async () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-muted-foreground text-sm">
                   of {formatPrice(WEEKLY_GOAL)} goal
                 </div>
               </CardContent>
@@ -101,7 +101,7 @@ const Page = async () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-muted-foreground text-sm">
                   of {formatPrice(MONTHLY_GOAL)} goal
                 </div>
               </CardContent>
@@ -134,7 +134,7 @@ const Page = async () => {
                     <div className="font-medium">
                       {order.shippingAddress?.name}
                     </div>
-                    <div className="hidden text-sm text-muted-foreground md:inline">
+                    <div className="text-muted-foreground hidden text-sm md:inline">
                       {order.user.email}
                     </div>
                   </TableCell>

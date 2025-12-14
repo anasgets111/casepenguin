@@ -17,9 +17,8 @@ import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import LoginModal from "@/components/LoginModal";
 
 const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
-
   const router = useRouter();
-   
+
   const { toast } = useToast();
   const { id } = configuration;
   const { user } = useKindeBrowserClient();
@@ -29,7 +28,6 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
   useEffect(() => setShowConfetti(true), []);
 
   const { color, model, finish, material } = configuration;
-  
 
   const tw = COLORS.find(
     (supportedColor) => supportedColor.value === color,
@@ -75,7 +73,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
     <>
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 flex select-none justify-center overflow-hidden"
+        className="pointer-events-none absolute inset-0 flex justify-center overflow-hidden select-none"
       >
         <Confetti
           active={showConfetti}
@@ -85,7 +83,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
 
       <LoginModal isOpen={isLoginModalOpen} setIsOpen={setIsLoginModalOpen} />
 
-      <div className="mt-20 f50lex flex-col items-center text-sm sm:grid-cols-12 sm:grid-rows-1 sm:gap-x-6 md:grid md:gap-x-8 lg:gap-x-12">
+      <div className="f50lex mt-20 flex-col items-center text-sm sm:grid-cols-12 sm:grid-rows-1 sm:gap-x-6 md:grid md:gap-x-8 lg:gap-x-12">
         <div className="md:col-span-4 md:row-span-2 md:row-end-2 lg:col-span-3">
           <Phone
             className={cn(`bg-${tw}`, "max-w-[150px] md:max-w-full")}

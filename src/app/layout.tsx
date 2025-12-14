@@ -12,9 +12,9 @@ const recursive = Recursive({ subsets: ["latin"] });
 export const metadata: Metadata = constructMetadata({
   icons: "https://casepenguin.vercel.app/favicon.ico",
   image: "https://casepenguin.vercel.app/thumbnail.png",
-  description: "Design and order your custom iPhone case today! Turn your memories into stylish phone protection with CasePenguin.",
-  
-})
+  description:
+    "Design and order your custom iPhone case today! Turn your memories into stylish phone protection with CasePenguin.",
+});
 
 export default function RootLayout({
   children,

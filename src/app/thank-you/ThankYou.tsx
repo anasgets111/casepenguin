@@ -46,7 +46,7 @@ const ThankYou = () => {
     <div className="bg-white">
       <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="max-w-xl">
-          <p className="text-base font-medium text-primary">Thank you!</p>
+          <p className="text-primary text-base font-medium">Thank you!</p>
           <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
             Your order has been received.{" "}
           </h1>
@@ -72,7 +72,7 @@ const ThankYou = () => {
           </div>
         </div>
 
-        <div className="mt-4 flex space-x-6 overflow-hidden rounded-xl bg-gray-900/5 ring-1 ring-inset ring-blue-900/50 lg:rounded-2xl">
+        <div className="mt-4 flex space-x-6 overflow-hidden rounded-xl bg-gray-900/5 ring-1 ring-blue-900/50 ring-inset lg:rounded-2xl">
           <PhonePreview
             croppedImageUrl={configuration.croppedImageUrl!}
             color={color!}

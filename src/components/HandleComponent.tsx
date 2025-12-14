@@ -1,6 +1,6 @@
 const HandleComponent = () => {
   return (
-    <div className="w-5 h-5 rounded-full shadow border bg-white border-zinc-200 transition hover:bg-primary " />
+    <div className="hover:bg-primary h-5 w-5 rounded-full border border-zinc-200 bg-white shadow transition" />
   );
 };
 export default HandleComponent;

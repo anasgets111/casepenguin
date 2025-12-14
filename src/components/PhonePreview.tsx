@@ -52,7 +52,7 @@ const PhonePreview = ({
         <img
           width={renderedDimensions.width / (3000 / 637)}
           className={cn(
-            "phone-skew relative z-20 rounded-b-[10px] rounded-t-[15px] md:rounded-b-[20px] md:rounded-t-[30px]",
+            "phone-skew relative z-20 rounded-t-[15px] rounded-b-[10px] md:rounded-t-[30px] md:rounded-b-[20px]",
             caseBackgroundColor,
           )}
           src={croppedImageUrl}

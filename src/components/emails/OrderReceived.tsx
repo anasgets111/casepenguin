@@ -42,14 +42,16 @@ const OrderReceivedEmail = ({
               alt="delivery penguin"
               style={{ margin: "auto" }}
             />
-            <Heading style={global.heading}>Thank you for your purchase!</Heading>
+            <Heading style={global.heading}>
+              Thank you for your purchase!
+            </Heading>
             <Text style={global.text}>
-              We're preparing your awesome case and will notify you once
-              it has been shipped. Delivery usually takes 2-7 days.
+              We're preparing your awesome case and will notify you once it has
+              been shipped. Delivery usually takes 2-7 days.
             </Text>
             <Text style={{ ...global.text, marginTop: 24 }}>
-              If you have any questions, please feel free
-              to contact us with your order number and we will be happy to help.
+              If you have any questions, please feel free to contact us with
+              your order number and we will be happy to help.
             </Text>
           </Section>
           <Hr style={global.hr} />
